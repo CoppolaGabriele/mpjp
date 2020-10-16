@@ -4,6 +4,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import org.hamcrest.number.IsCloseTo;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 class S04Test {
@@ -62,6 +64,14 @@ class S04Test {
 
         assertThat(actual, is(0L));
     }
+    
+    @Test
+    @Disabled
+    void newton() {
+    	double actual = S04.sqrt(9);
+    	
+    	assertThat(actual, is(3));
+    }
 
     @Test
     void factorialFour() {
@@ -79,7 +89,9 @@ class S04Test {
 
     @Test
     void fibonacci() {
-        fail("Not yet implemented");
+    	long actual = S04.fibonacci(5);
+
+        assertThat(actual, is(5L));
     }
 
     @Test

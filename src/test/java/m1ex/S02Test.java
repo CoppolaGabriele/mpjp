@@ -51,7 +51,7 @@ class S02Test {
     @Test
     void engineCapacityPlain() {
         double actual = S02.engineCapacity(74, 75, 4);
-
+        System.out.println(actual);
         assertThat(actual, closeTo(1290.252, 0.001));
     }
 
